@@ -1,0 +1,8 @@
+.header__expenses {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(230, 69, 69);
+    padding: 10px;
+    min-width: 220px;
+    margin: 10px 0 40px 0;
+}

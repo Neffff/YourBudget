@@ -5,7 +5,7 @@ class HeaderExpenses extends Component {
     render() {
         return (
             <div className="header__expenses">
-<span>EXPENSES -23.00</span>
+                <span>EXPENSES</span><span>-23.00</span>
             </div>
         );
     }
