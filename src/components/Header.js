@@ -13,10 +13,10 @@ class Header extends Component {
             <div className="header">
                 <div className="header__title">
                     <h1 className="header__title--month">Avaible budget in {MONTH_NAMES[new Date().getMonth()]} {new Date().getFullYear()}</h1>
-                    <span className="header__title--value">+ 1000k</span>
+                    <span className="header__title--value">+ {this.props.allSum}</span>
                 </div>
-                <HeaderIncome/>
-                <HeaderExpenses/>
+                <HeaderIncome incomeSum={this.props.incomeSum}/>
+                <HeaderExpenses expensesSum={this.props.expensesSum}/>
             </div>
         );
     }

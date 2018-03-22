@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
+import {CSVLink} from 'react-csv';
 import '../styles/MainInputs.css';
 
 class MainInputs extends Component {
 
     render() {
-        const { descInputValue, typeInputValue, valInputValue, handleInputChange, handleSubmit } = this.props;
+        const { descInputValue, typeInputValue, valInputValue, handleInputChange, handleSubmit, data } = this.props;
         return (
             <div>
             <form className="mainInputs" onSubmit={this.handleSubmit}>
@@ -37,7 +38,8 @@ class MainInputs extends Component {
                 className="mainInputs__addbtn">add</button>
                 
             </form>
-            <button className="mainInputs__downloadbtn">download</button>   
+            <CSVLink data={data} ><button className="mainInputs__downloadbtn">download</button></CSVLink>
+               
             </div>
         );
     }

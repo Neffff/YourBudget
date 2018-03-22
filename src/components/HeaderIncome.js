@@ -5,7 +5,8 @@ class HeaderIncome extends Component {
     render() {
         return (
             <div className="header__income">
-                <span className="header__income--name">INCOME</span><span className="header__income--value">+423.00</span>
+                <span className="header__income--name">INCOME</span>
+                <span className="header__income--value">+{parseInt(this.props.incomeSum, 10).toLocaleString('de-DE')}</span>
             </div>
         );
     }
