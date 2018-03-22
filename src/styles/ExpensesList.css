@@ -1,0 +1,35 @@
+.expensesList {
+    width: 40%;
+}
+
+.expensesList__name {
+    color: rgb(230, 69, 69);
+    font-weight: 200;
+}
+
+.expensesList__list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.expensesList__list li:first-child {
+    border-top: 1px solid #e7e7e7;
+}
+
+.expensesList__list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.expensesList__list li span:first-child {
+    color: rgb(132, 132, 132);
+}
+
+.expensesList__list li span:nth-child(2) {
+    color: rgb(230, 69, 69);
+}

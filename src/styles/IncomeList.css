@@ -1,0 +1,31 @@
+.incomeList {
+    width: 40%;
+}
+.incomeList__name {
+    color: #1FAB89;
+    font-weight: 200;
+}
+.incomeList__list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.incomeList__list li:first-child {
+    border-top: 1px solid #e7e7e7;
+}
+
+.incomeList__list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px;
+    border-bottom: 1px solid #e7e7e7;
+}
+.incomeList__list li span:first-child {
+    color: rgb(132, 132, 132);
+}
+.incomeList__list li span:nth-child(2) {
+    color: #1FAB89;
+}
