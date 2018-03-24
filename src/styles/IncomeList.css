@@ -29,3 +29,13 @@
 .incomeList__list li span:nth-child(2) {
     color: #1FAB89;
 }
+.incomeList__trash {
+    cursor: pointer;
+    color: #1FAB89;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+.incomeList__trash:hover {
+    color: rgb(10, 144, 110);
+}

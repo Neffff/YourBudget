@@ -27,18 +27,18 @@ class App extends Component {
         incomeSum: this
           .state
           .incomeItems
-          .reduce((aku, cur) => aku + parseInt(cur[2], 10), 0),
-          allSum: this.state.incomeSum - this.state.expensesSum
+          .reduce((aku, cur) => aku + parseInt(cur[2], 10), 0)
       })
-      // this.setState({ allSum: this.state.incomeSum - this.state.expensesSum })
     } else if (prevState.expensesItems !== this.state.expensesItems) {
       this.setState({
         expensesSum: this
           .state
           .expensesItems
           .reduce((aku, cur) => aku + parseInt(cur[2], 10), 0)
-      }),
-      this.setState({ allSum: parseInt(this.state.incomeSum, 10) - parseInt(this.state.expensesSum, 10) })
+      })
+    }
+    if (prevState.incomeSum !== this.state.incomeSum || prevState.expensesSum !== this.state.expensesSum) {
+      this.setState({ allSum: this.state.incomeSum - this.state.expensesSum })
     }
   }
   handleInputChange = event => {

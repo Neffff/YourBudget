@@ -25,7 +25,16 @@
     padding: 13px;
     border-bottom: 1px solid #e7e7e7;
 }
-
+.expensesList__trash {
+    cursor: pointer;
+    color: rgb(230, 69, 69);
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+.expensesList__trash:hover {
+    color: rgb(209, 34, 34);
+}
 .expensesList__list li span:first-child {
     color: rgb(132, 132, 132);
 }

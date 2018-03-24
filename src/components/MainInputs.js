@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
-import {CSVLink} from 'react-csv';
+import React, { Component } from 'react';
+import { CSVLink } from 'react-csv';
+import { FaDownload, FaCheckCircleO } from 'react-icons/lib/fa';
 import '../styles/MainInputs.css';
 
 class MainInputs extends Component {
@@ -33,12 +34,12 @@ class MainInputs extends Component {
                     type="number"
                     placeholder="value"
                     min="0"></input>
-                <button 
-                onClick={handleSubmit}
-                className="mainInputs__addbtn">add</button>
-                
+                    <FaCheckCircleO 
+                    onClick={handleSubmit}
+                    className="mainInputs__addbtn"/>
             </form>
-            <CSVLink data={data} ><button className="mainInputs__downloadbtn">download</button></CSVLink>
+            
+            <CSVLink data={data} ><FaDownload className="mainInputs__downloadbtn"/></CSVLink>
                
             </div>
         );
