@@ -49,7 +49,13 @@ class App extends Component {
       }
     });
   };
-
+  handleItemDelete = (currentItem) => {
+    if (currentItem[0] === '+') {
+      this.setState({ incomeItems: this.state.incomeItems.filter((item) => item !== currentItem)})
+    } else {
+      this.setState({ expensesItems: this.state.expensesItems.filter((item) => item !== currentItem)})}
+  }
+  
   handleSubmit = (e) => {
     e.preventDefault();
     (this.state.currentInputsValues.type === '+')
@@ -84,11 +90,11 @@ class App extends Component {
           typeInputValue={currentInputsValues.type}
           valInputValue={currentInputsValues.value}
           handleSubmit={this.handleSubmit}
-          handleInputChange={this.handleInputChange}
+          handleInputChange={this.handleInputChange.bind(this)}
           data={incomeItems.concat(expensesItems)}/>
         <div className="App__lists">
-          <IncomeList incomeItems={incomeItems}/>
-          <ExpensesList expensesItems={expensesItems}/>
+          <IncomeList incomeItems={incomeItems} handleItemDelete={this.handleItemDelete}/>
+          <ExpensesList expensesItems={expensesItems} handleItemDelete={this.handleItemDelete}/>
         </div>
       </div>
     );
